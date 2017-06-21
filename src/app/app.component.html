@@ -3,7 +3,7 @@
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -11,12 +11,12 @@
           </button>
           <a class="navbar-brand" href="#">Live action</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse" [ngClass]="{ 'in': isIn }">
                     <ul class="nav navbar-nav">
-            <li><a class="nav-link" routerLink="home">Home</a></li>
-            <li><a class="nav-link" routerLink="about">About</a></li>
-            <li><a class="nav-link" routerLink="login">Login</a></li>
-            <li><a class="nav-link" routerLink="logout">Sair</a></li>
+            <li><a class="nav-link" routerLink="home" (click)="toggleState()">Home</a></li>
+            <li><a class="nav-link" routerLink="about" (click)="toggleState()">About</a></li>
+            <li><a class="nav-link" routerLink="login" (click)="toggleState()">Login</a></li>
+            <li><a class="nav-link" routerLink="logout" (click)="toggleState()">Sair</a></li>
                     </ul>
 <!--
           <form class="navbar-form navbar-right">
